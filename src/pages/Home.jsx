@@ -39,7 +39,7 @@ const slides = [
     tag: 'COMMUNITY',
     title: 'Gather & Belong',
     description: 'A welcoming village where people of all backgrounds come together in fellowship, celebration, and shared purpose.',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400'
+    image: 'hero.png'
   },
   {
     tag: 'ARTS STUDIO',
@@ -57,7 +57,7 @@ const slides = [
     tag: 'LEGAL & BUSINESS',
     title: 'Build & Thrive',
     description: 'Real support for real dreams — legal guidance, business strategy, and advisory to help you launch and grow.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400'
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400'
   },
   {
     tag: 'PERFORMING ARTS',
@@ -75,15 +75,18 @@ function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center px-8 sm:px-16 py-20"
+        className="relative min-h-screen flex items-center px-8 sm:px-16 py-5 sm:py-20 bg-cover bg-center bg-no-repeat
+              bg-[linear-gradient(to_right,rgba(0,0,0,0.85)_40%,rgba(0,0,0,0.4)_100%),url('/hero-v.png')]
+              sm:bg-[linear-gradient(to_right,rgba(0,0,0,0.85)_40%,rgba(0,0,0,0.4)_100%),url('/hero.png')]
+        "
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400')`,
+          // backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.4) 100%), url('hero.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         {/* Vision & Mission tag */}
-        <div className="absolute top-8 left-16">
+        <div className="hidden sm:block absolute top-8 left-16">
           <span className="border border-pink-500 text-pink-400 text-xs tracking-widest px-4 py-2 rounded-full flex items-center gap-2">
             ★ OUR VISION & MISSION
           </span>
@@ -116,7 +119,7 @@ function Home() {
         {[
           ["Our Foundation","Faith & Purpose"],["Our Method","Unity of Vision"],["Our Promise","Charity Never Fails"],["Our Community","All Are Welcome"],
         ].map((t,i)=>(
-          <div className="px-8 py-4 md:py-0">
+          <div key={`pillar_${i}`} className="px-8 py-4 md:py-0">
             <p className="text-pink-500 text-xs tracking-widest md:mb-2 uppercase">{t[0]}</p>
             <p className="text-white text-xl font-semibold">{t[1]}</p>
         </div>
@@ -124,7 +127,7 @@ function Home() {
       </section>
 
       {/* Founder Video Section */}
-      <section className="bg-[#1a1a1a] px-8 sm:px-16 py-24 flex flex-col md:flex-row items-center gap-16">
+      <section className="bg-[#1a1a1a] px-8 sm:px-16 py-24 flex flex-col max-w-300 justify-self-center items-center gap-16">
 
         {/* Left side text */}
         <div className="flex-1">
@@ -142,23 +145,15 @@ function Home() {
         </div>
 
         {/* Right side video placeholder */}
-        <div className="flex-1 relative rounded-2xl overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800"
-            alt="Founder video"
-            className="w-full h-80 object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-2">
-            <div className="w-16 h-16 bg-pink-500/80 rounded-full flex items-center justify-center">
-              <span className="text-white text-2xl">▶</span>
-            </div>
-            <p className="text-white text-sm tracking-widest">WATCH THE STORY</p>
-          </div>
-          <div className="absolute bottom-4 left-4">
-            <p className="text-white font-semibold">Village Founder</p>
-            <p className="text-gray-300 text-xs tracking-widest">ONE TRUE PURE LOVE VILLAGE</p>
-          </div>
-        </div>
+        <video
+          alt="Founder video"
+          className="rounded-2xl w-full object-cover aspect-video max-w-200"
+          controls
+          autoPlay
+          muted>
+            <source src="showcase_video.mp4" type="video/mp4"/>
+            Your Browser does not support the video tag.
+          </video>
 
       </section>
 
