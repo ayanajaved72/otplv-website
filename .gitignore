@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.agents
+skills-lock.json
+
+.env*
+!.env.example
+test.ps1
+
+public/showcase_video.mp4
