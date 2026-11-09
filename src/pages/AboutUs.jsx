@@ -8,22 +8,18 @@ function AboutUs() {
     >
 
       {/* Hero */}
-      <section className="pt-16 pb-8 px-16">
+      <section className="pt-16 pb-8 px-8 sm:px-16">
         <p className="text-pink-500 text-xs tracking-widest mb-4">THE HEART BEHIND THE VILLAGE</p>
         <h1 className="text-6xl font-serif text-white mb-12">Meet the Founder</h1>
 
         {/* Photo placeholder */}
-        <div className="bg-[#2a2a2a] border border-gray-700 rounded-2xl w-full h-96 flex flex-col items-center justify-end pb-8 gap-3">
-          <div className="w-16 h-16 bg-pink-800 border-2 border-pink-500 rounded-full flex items-center justify-center">
-            <span className="text-pink-300 text-2xl font-serif">W</span>
-          </div>
-          <p className="text-gray-400 text-sm">Photo coming soon</p>
-          <p className="text-gray-500 text-xs">Wally Iwanciw</p>
+        <div className="bg-[#2a2a2a] border max-w-200 border-gray-700 rounded-2xl p-5 mx-auto">
+         <img src='wally.png' className="aspect-3/4 sm:aspect-3/2 rounded-2xl object-cover object-center"/>
         </div>
       </section>
 
       {/* Name card */}
-      <section className="px-16 py-6">
+      <section className="px-8 sm:px-16 py-6">
         <div className="bg-[#2a2a2a] border border-gray-700 rounded-2xl p-6">
           <h2 className="text-white text-2xl font-serif mb-1">Wally Iwanciw</h2>
           <p className="text-pink-400 text-sm mb-1">Owner</p>
@@ -32,7 +28,7 @@ function AboutUs() {
       </section>
 
       {/* Bio */}
-      <section className="px-16 py-12">
+      <section className="px-8 sm:px-16 py-12">
         <h2 className="text-4xl font-serif text-white leading-tight mb-8">
           Building purpose-driven community <span className="italic">one relationship at a time.</span>
         </h2>
@@ -63,7 +59,7 @@ function AboutUs() {
 
         {/* More coming soon */}
         <p className="text-pink-500 text-xs tracking-widest mb-8">MORE COMING SOON</p>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="flex flex-col md:flex-row gap-6">
           {[
             {
               title: 'Background & Story',
