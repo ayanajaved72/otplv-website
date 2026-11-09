@@ -1,16 +1,34 @@
-# React + Vite
+# One True Pure Love Village
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The One True Pure Love Village website is a React single-page application for introducing the community, its centers, and membership options.
 
-Currently, two official plugins are available:
+## Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Home** (`/`) — introduces the village, highlights its centers, and features member testimonials.
+- **About** (`/about`) — shares the founder’s story.
+- **Memberships** (`/memberships`) — describes Village Explorer and Studio Member plans.
+- **Sign up** (`/signup`) — collects contact details, interests, a membership choice, and a SYCE color.
+- **Contact** (`/contact`) — provides contact details and a message form.
 
-## React Compiler
+The signup and contact forms submit to the OTPLV backend.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
+Requirements: Node.js and npm.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+npm install
+npm run dev
+```
+
+Other available scripts:
+
+```sh
+npm run build    # Create a production build in dist/
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
+```
+
+## Technology
+
+Built with React 19, React Router, Vite, and Tailwind CSS 4.
